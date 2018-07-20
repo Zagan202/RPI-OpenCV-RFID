@@ -2,7 +2,7 @@ from button import *
 import time
 
         
-b = Button(7)
+b = Button(17)
 
 while True:
     if b.is_pressed():

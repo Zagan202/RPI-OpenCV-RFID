@@ -7,7 +7,7 @@ reader = SimpleMFRC522.SimpleMFRC522()
 
 try:
     while True:
-        text = input('New Text: ')
+        text =raw_input("Name? ")
         print("Now scan a tag to write")
         id, text = reader.write(text) 
         print("written")
