@@ -49,15 +49,17 @@ reader = SimpleMFRC522.SimpleMFRC522()
 
 print("Hold a tag near the reader or press button: ")
 
-if b.is_pressed():
-    text =raw_input("Name? ")
-    print("Now scan a tag to write")
-    id, text = reader.write(text) 
-    print("written")
-    print(id)
-    print(text)
+#if b.is_pressed():
+#    text =raw_input("Name? ")
+#    print("Now scan a tag to write")
+#    id, text = reader.write(text) 
+#    print("written")
+#    print(id)
+#    print(text)
 
-try:        
+try:
+    if b.is_pressed():
+        print(time.time())        
     id, text = reader.read()
     print(id)
     if id == 760064681858:
