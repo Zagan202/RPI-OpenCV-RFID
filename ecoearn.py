@@ -63,7 +63,8 @@ try:
     if id == 760064681858:
         while True:
             if b.is_pressed():
-                print(time.time())   
+                print(time.time())  
+            id = 0     
             id, text = reader.read()
             print(id)
             if id == 760064681858:
