@@ -48,13 +48,15 @@ def add_command(id, command):
 reader = SimpleMFRC522.SimpleMFRC522()    
 
 print("Hold a tag near the reader or press button: ")
-b.is_pressed():
+
+if b.is_pressed():
     text =raw_input("Name? ")
     print("Now scan a tag to write")
     id, text = reader.write(text) 
     print("written")
     print(id)
     print(text)
+
 try:        
     id, text = reader.read()
     print(id)
@@ -138,14 +140,6 @@ try:
                 csv.close()
                 cv2.destroyAllWindows()
                 vs.stop()
-
-    elif b.is_pressed():
-        text =raw_input("Name? ")
-        print("Now scan a tag to write")
-        id, text = reader.write(text) 
-        print("written")
-        print(id)
-        print(text)
 
 finally:
     print("cleaning up")
