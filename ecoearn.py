@@ -61,13 +61,12 @@ try:
     id, text = reader.read()
     print(id)
     if id == 760064681858:
-        while True:
+        while True: 
             if b.is_pressed():
-                print(time.time())  
-            id = 0     
-            id, text = reader.read()
-            print(id)
-            if id == 760064681858:
+                print(time.time())      
+            id2, text = reader.read()
+            print(id2)
+            if id2 == 760064681858:
                 # construct the argument parser and parse the arguments
                 ap = argparse.ArgumentParser()
                 ap.add_argument("-o", "--output", type=str, default="barcodes.csv",
