@@ -53,7 +53,7 @@ try:
     while True:
         id, text = reader.read()
         print(id)
-        if id == "":
+        if id == 760064681858:
             # construct the argument parser and parse the arguments
             ap = argparse.ArgumentParser()
             ap.add_argument("-o", "--output", type=str, default="barcodes.csv",
@@ -130,7 +130,7 @@ try:
             cv2.destroyAllWindows()
             vs.stop()
 
-        else if b.is_pressed():
+        elif b.is_pressed():
             text =raw_input("Name? ")
             print("Now scan a tag to write")
             id, text = reader.write(text) 
