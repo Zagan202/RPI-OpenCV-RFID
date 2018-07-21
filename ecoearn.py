@@ -45,9 +45,9 @@ def add_command(id, command):
     tags[id] = command
     save_tags()
 
-reader = SimpleMFRC522.SimpleMFRC522()
+reader = SimpleMFRC522.SimpleMFRC522()    
 
-print("Hold a tag near the reader")
+print("Hold a tag near the reader or press button")
 
 try:
     while True:
@@ -135,7 +135,6 @@ try:
             print("Now scan a tag to write")
             id, text = reader.write(text) 
             print("written")
-        
             print(id)
             print(text)
 
