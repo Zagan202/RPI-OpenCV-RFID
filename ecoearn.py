@@ -57,22 +57,16 @@ print("Hold a tag near the reader or press button: ")
 #    print(id)
 #    print(text)
 
-try:     
-    id, text = reader.read()
-    print(id)
-    if id == 760064681858:
-        text =raw_input("y or n")
-        if text == "y":
-            print("Press Button")
-            while True:
-                if b.is_pressed():
-                    print(time.time())
-                    exit()
-        elif text == "n":  
-            while True:    
-                id2, text = reader.read()
-                print(id2)
-                if id2 == 760064681858:
+try:
+    print("Press button to create card or scan to recycle and EARN!")
+    while True:
+        if b.is_pressed():
+            print(time.time())
+        if reader.read() == 760064681858:
+            id, text = reader.read()
+            print(id)
+            if id == 760064681858:
+                while True:    
                     # construct the argument parser and parse the arguments
                     ap = argparse.ArgumentParser()
                     ap.add_argument("-o", "--output", type=str, default="barcodes.csv",
