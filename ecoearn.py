@@ -64,9 +64,10 @@ try:
         text =raw_input("y or n")
         if text == "y":
             print("Press Button")
-            if b.is_pressed():
-                print(time.time())
-                exit()
+            while True:
+                if b.is_pressed():
+                    print(time.time())
+                    exit()
         elif text == "n":  
             while True:    
                 id2, text = reader.read()
