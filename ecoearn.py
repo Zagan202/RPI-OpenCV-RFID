@@ -57,13 +57,13 @@ print("Hold a tag near the reader or press button: ")
 #    print(id)
 #    print(text)
 
-try:
-    if b.is_pressed():
-        print(time.time())        
+try:     
     id, text = reader.read()
     print(id)
     if id == 760064681858:
         while True:
+            if b.is_pressed():
+                print(time.time())   
             id, text = reader.read()
             print(id)
             if id == 760064681858:
