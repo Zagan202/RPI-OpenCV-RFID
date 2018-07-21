@@ -116,7 +116,7 @@ try:
                     text = "{} ({})".format(barcodeData, barcodeType)
                     cv2.putText(frame, text, (x, y - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-
+                    print (barcodeData)
                     # if the barcode text is currently not in our CSV file, write
                     # the timestamp + barcode to disk and update the set
                     if barcodeData not in found:
